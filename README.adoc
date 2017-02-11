@@ -1,0 +1,11 @@
+# Gradient
+
+Retourne un nombre n de couleur intermédiaire entre deux couleurs.
+
+## Usage de la lirairie
+
+./lib/gradient.js
+require('./lib/gradient')(startColor, endColor, steps)
+
+## Usage du client (nécessite coffeescript)
+./src/client.coffee -s <startColor> -e <endColor> -n <colorStep>

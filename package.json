@@ -1,0 +1,12 @@
+{
+  "name": "gr4di3nt",
+  "version": "1.0.0",
+  "description": "Génère des dégradés de couleurs à partir de deux couleurs",
+  "main": "gr4di3nt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "coffee ./src/client.coffee"
+  },
+  "author": "http://stackoverflow.com/a/12934900",
+  "license": "ISC"
+}
