@@ -2,7 +2,7 @@
 [format="csv"]
 |======================
 Rédacteur, K3rn€l P4n1k
-Date, dimanche 16 avril 2017, 18:00:51 (UTC+0200)
+Date, dimanche 16 avril 2017
 État, Utilisable
 Dépendances, CoffeeScript version 1.10.0
 |======================
