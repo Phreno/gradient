@@ -1,11 +1,91 @@
+.Informations générales
+[format="csv"]
+|======================
+Rédacteur, K3rn€l P4n1k
+Date, dimanche 16 avril 2017, 18:00:51 (UTC+0200)
+État, Utilisable
+Dépendances, CoffeeScript version 1.10.0
+|======================
+
+# Gradient
+
+.Objectif du document
+Documente l'usage du script `gradient`
+
+.Description générale
+Ce script à pour but de fournir une liste de valeur hexadécimale représentant un gradient de couleur entre deux bornes
+
+.Intention
+Marquer l'intensité de valeurs
+
+# Usage
+
+.Signature
+[source, bash]
+----
+gradient -s <startColor> -e <endColor> -n <colorStep>
+----
+
+.Arguments
+[format="csv"]
+|====
+-s, startColor, valeur hexadécimale de la borne inférieure
+-e, endColor, valeur hexadécimale de la borne supérieure
+-n, colorStep, nombre de couleur intermédiaire
+|====
+
+.Exemple
+[source, bash]
+----
+gradient -s aa10aa -e ee55bb -n 20
+----
+
+.Résultat
+----
+[ '#a1aa',
+  '#a4ea',
+  '#a812a',
+  '#ab16a',
+  '#af1aa',
+  '#b21ea',
+  '#b522a',
+  '#b926a',
+  '#bc2aa',
+  '#c02ea',
+  '#c333b',
+  '#c637b',
+  '#ca3bb',
+  '#cd3fb',
+  '#d143b',
+  '#d447b',
+  '#d74bb',
+  '#db4fb',
+  '#de53b',
+  '#e257b',
+  '#e55bb' ]
+----
+
+## Import de la librairie
+
+.Utilisation de `./lib/gradient.js`
+[source, javascript]
+----
+require('./lib/gradient')(startColor, endColor, steps)
+----
+
+
+# Commentaires
+Le fichier `lib/gradient.js` à été trouvé sur le net est mis en bundle pour les besoins de la réutilisation.
+
+# Références
+[format="csv"]
+|====
+gradient.js, http://stackoverflow.com/a/12934900
+|====
 # Gradient
 
 Retourne un nombre n de couleur intermédiaire entre deux couleurs.
 
 ## Usage de la lirairie
 
-./lib/gradient.js
-require('./lib/gradient')(startColor, endColor, steps)
-
 ## Usage du client (nécessite coffeescript)
-./src/client.coffee -s <startColor> -e <endColor> -n <colorStep>

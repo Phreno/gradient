@@ -1,0 +1,53 @@
+#!/usr/bin/env coffee
+
+# Développeur ....: K3rn€l_P4n1K
+# Nom ............: gradient
+# Description ....: Client pour la librairie gradient
+# Version ........: 1.0
+# Date ...........: dimanche 16 avril 2017, 18:09:23 (UTC+0200)
+# Dépendances ....: CoffeeScript version 1.10.0, gradientjs
+
+# Fonctionnalité .: Gradient de couleur en hexadécimale
+# Intention ......: Marquer l'importance
+# Remarque .......: AUCUN
+
+# ===========================
+# Copyright 2017 K3rn€l P4n1k
+# ===========================
+#
+# gradient is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# gradient is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with gradient. If not, see <http://www.gnu.org/licenses/>.
+
+DEFAULT = {
+  n: 5
+  startColor: '#000000'
+  endColor: '#FFFFFF'
+}
+
+LIB = {
+  gradient: require '../lib/gradient'
+}
+
+VENDOR = {
+  program: require 'commander'
+}
+
+VENDOR.program.version 'α'
+VENDOR.program.option '-n, --colorNumber [int]', "Nombre de couleur [#{DEFAULT.n}]", DEFAULT.n
+VENDOR.program.option '-s, --startColor [hex]', "Couleur de départ [#{DEFAULT.startColor}]", DEFAULT.startColor
+VENDOR.program.option '-e, --endColor [hex]', "Couleur d\'arrivé [#{DEFAULT.endColor}}]", DEFAULT.endColor
+VENDOR.program.parse process.argv
+
+colors = LIB.gradient VENDOR.program.startColor, VENDOR.program.endColor, VENDOR.program.colorNumber
+
+console.log colors #console.log color for color in colors.split (',')
