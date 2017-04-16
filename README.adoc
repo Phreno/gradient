@@ -82,10 +82,3 @@ Le fichier `lib/gradient.js` à été trouvé sur le net est mis en bundle pour 
 |====
 gradient.js, http://stackoverflow.com/a/12934900
 |====
-# Gradient
-
-Retourne un nombre n de couleur intermédiaire entre deux couleurs.
-
-## Usage de la lirairie
-
-## Usage du client (nécessite coffeescript)
